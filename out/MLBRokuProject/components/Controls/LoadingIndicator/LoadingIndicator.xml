@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LoadingIndicator" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="fadeInterval" type="time"/>
+		<field id="state" type="string"/>
+		<field id="control" type="string" value="start" onChange="onControlChange"/>
+	</interface>
+	
+	<script type="text/brightscript" uri="pkg:/components/Controls/LoadingIndicator/LoadingIndicator.brs" />
+	
+	<children>
+		<Group id="loadingIndicatorGroup">
+			<Rectangle id= "loading" width = "1920" height = "1080" translation = "[0.0,0.0]" color = "0x000000FF">
+				<Label id = "loadingLabel2"   text = "Loading" width = "200" horizAlign = "" translation = "[860, 632.5]" />
+				<Label  id = "loadingLabel" text = "..." width = "100" horizAlign = "left" translation = "[1060, 632.5]" />		
+			</Rectangle>
+		</Group>
+		
+		<Timer id = "timerLoading" repeat = "true" duration = "0.4" />
+		
+		<Animation id="fadeAnimation" repeat="false" easeFunction="linear">
+        	<FloatFieldInterpolator keyValue="[1, 0]" key="[0, 1]" fieldToInterp="loadingIndicatorGroup.opacity"/>
+        </Animation>
+	</children>
+</component>

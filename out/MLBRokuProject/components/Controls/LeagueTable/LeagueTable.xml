@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LeagueTable" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="width" type="float" value="0.0" alias="backgroundRect.width,header.width" />
+		<field id="height" type="float" value="0.0" alias="backgroundRect.height" />
+		<field id="opacity" type="float" value="1.0" alias="backgroundRect.opacity" />
+		<field id="headerColor" type="color" value="0x000000FF" alias="header.color" /> 
+		
+		<field id="title" type="string" alias="titleLabel.text"/>
+		<field id="content" type="assocarray" onChange="onSetLeagueContent" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/Controls/LeagueTable/LeagueTable.brs" />
+	
+	<children>
+		<Rectangle id="backgroundRect" color="0xFFFFFFFF"/>
+		<Rectangle id="header" height="50"/>
+		
+		<LayoutGroup id="layoutHeader" layoutDirection="horiz">
+			<Label id="titleLabel" text="Title League" />
+			<Label id="winsLabel" text="Wins" />
+			<Label id="lossesLabel" text="Losses"/>
+		</LayoutGroup>
+		
+	</children>
+</component>

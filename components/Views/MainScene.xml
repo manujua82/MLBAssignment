@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name="MainScene" extends="Scene" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<!-- importing main handler -->
+    <script type="text/brightscript" uri="pkg:/components/Views/MainScene.brs" />
+    
+    <children>
+    	<Poster id="background" uri="pkg:/images/stadium.jpg" loadDisplayMode="scaleToZoom"/>
+    	<Rectangle id="layer" color="0x000000FF" width="1920" height="1080" opacity="0.6" />
+    	
+    	<Label id="title" text="DIVISION STANDINGS" width="500" translation="[710,75]" horizAlign="center" font="font:MediumBoldSystemFont" />
+    	
+    	<LeagueTable id="americanTable" width="760" height="900" headerColor="0xFF0000FF" opacity="0.8" itemSpacings="[40,280,40]" translation="[100,150]" />
+    	
+    	<LeagueTable id="nationalTable" width="760" height="900" headerColor="0x060A93FF" opacity="0.8" itemSpacings="[40,280,40]" translation="[1060,150]" />
+    	
+    	<LoadingIndicator id="loadingIndicator" fadeInterval="0.7" />
+    </children>
+</component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="TeamRecord" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="content" type="assocarray" onChange="onSetDivisionContent" />
+		<field id="width" type="float" value="0.0" alias="underLine.width" />
+	</interface>
+	
+	<script type="text/brightscript" uri="pkg:/components/Controls/TeamRecord/TeamRecord.brs" />
+	
+	<children>
+		<LayoutGroup id="layoutLine" layoutDirection="vert" >
+			<LayoutGroup id="layoutRecord" layoutDirection="horiz">
+				<Label id="titleLabel" text="Title League" height="30" color="0x505050FF" vertAlign="center"/>
+				<Label id="winsLabel" text="Wins" height="30" color="0x505050FF" horizAlign="center" vertAlign="center"/>
+				<Label id="lossesLabel" text="Losses" height="30" color="0x505050FF"  horizAlign="center" vertAlign="center"/>
+			</LayoutGroup>
+			<Rectangle id="underLine" height="2" color="0x9b9b9bFF"/>
+		</LayoutGroup>
+	</children>
+</component>
