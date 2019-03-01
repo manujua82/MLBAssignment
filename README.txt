@@ -1,4 +1,3 @@
-Simple Roku Scene Graph channel containing an empty scene.
-This can be enhanced with the following features:
-1)      Add grid with video preview (this adds the video grid)
-2)      Add loading indicator component
+Build a Roku scene graph application to show the regular season results for the 2018 MLB
+season. The application should retrieve the season results for each team, and then display the
+brackets sorted by league/division with the teams in each division sorted by win/loss ratio.
